@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>SSE</title>
+  </head>
+  <body>
+    <h1>Server Side Events Example</h1>
+    <div id="main">
+      <h3 id="beat-container">Heart Beat Container</h3>
+      <div id="beat"></div>
+    </div>
+    <script>
+      window.onload = () => {
+          let eventSource = new EventSource("/beat");
+          console.log(event.data);
+          eventSource.onmessage = (event) => {
+              document.getElementById("beat").innerHTML = event.data;
+          };
+      };
+    </script>
+  </body>
+</html>
