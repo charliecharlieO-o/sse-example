@@ -1,3 +1,3 @@
-# sse-example
+# ServerSideEvents Examples with Go
 
-Server Side Events with go, super simple heartbeat example
+Heartbeat main example and memory structures.
